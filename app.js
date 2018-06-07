@@ -16,7 +16,7 @@ client.on('ready', async () => {
 	logger.verbose(`Connected as: ${client.user.tag}`);
 	logger.verbose(`Client ID: ${client.user.id}`);
 	logger.verbose(`====================================`);
-	await client.user.setGame('</[0-9]\w+/g>', 'https://www.twitch.tv/theonlyartz');
+	await client.user.setGame('Chasing Pεтяσℓ Mαятιηι', 'https://www.twitch.tv/theonlyartz');
 });
 client.commands = new Discord.Collection();
 
@@ -41,7 +41,7 @@ fs.readdir('./commands', (err, files) => {
 		logger.error(e);
 	}
 });
-const prefix = ';';
+const prefix = ';'
 client.on('message', async message => {
 	if (message.author.id !== '208936898566160384') {
 		return;
