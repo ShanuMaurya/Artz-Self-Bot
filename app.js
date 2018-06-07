@@ -41,9 +41,9 @@ fs.readdir('./commands', (err, files) => {
 		logger.error(e);
 	}
 });
-const prefix = ';'
+const prefix = ';';
 client.on('message', async message => {
-	if (message.author.id !== '208936898566160384') {
+	if (message.author.id !== '400359111834861568') {
 		return;
 	}
 	if (message.author.bot) {
