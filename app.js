@@ -16,7 +16,7 @@ client.on('ready', async () => {
 	logger.verbose(`Connected as: ${client.user.tag}`);
 	logger.verbose(`Client ID: ${client.user.id}`);
 	logger.verbose(`====================================`);
-	await client.user.setGame('Chasing Pεтяσℓ Mαятιηι', 'https://www.twitch.tv/theonlyartz');
+	await client.user.setGame('Ammethyyst On Discord', 'https://www.twitch.tv/theonlyartz');
 });
 client.commands = new Discord.Collection();
 
