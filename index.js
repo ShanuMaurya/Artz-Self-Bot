@@ -3,7 +3,7 @@ const Discord = require('discord.js'),
 	
  
 client = new Discord.Client(),
-      token = require('./private.json'),
+      //token = require('./private.json'),
       fs = require('fs'),
       winstonLogger = require('./classes/logger.js');
 winston = require('winston'),
@@ -11,11 +11,11 @@ winston = require('winston'),
 const snekfetch = require('snekfetch');
 ///  const Cleverbot = require("cleverbot-node");
 /// const clbot = new Cleverbot;
-/// clbot.configure({botapi: "46JYSuDaKLGZdNW1ipstUqVt5BaDVnAz"});
+/// clbot.configure({botapi: ""});
 
 const winstonClass = new winstonLogger();
 global.logger = winstonClass.logger;
-client.login(token.token);
+client.login(process.env.TOKEN);
 client.on('ready', async () => {
 	logger.verbose(`${client.user.username} Is up and ready to work`);
 	logger.verbose(`Connected as: ${client.user.tag}`);
