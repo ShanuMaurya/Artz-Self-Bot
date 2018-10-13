@@ -1,28 +1,20 @@
+// Discord.js bot
 const Discord = require('discord.js'),
 	moment = require('moment');
 	
  
 client = new Discord.Client(),
-      //token = require('./private.json'),
+   
       fs = require('fs'),
       winstonLogger = require('./classes/logger.js');
 winston = require('winston'),
       chalk = require('chalk');
 const snekfetch = require('snekfetch');
-///  const Cleverbot = require("cleverbot-node");
-/// const clbot = new Cleverbot;
-/// clbot.configure({botapi: ""});
-
-const winstonClass = new winstonLogger();
-global.logger = winstonClass.logger;
-client.login(process.env.TOKEN);
-client.on('ready', async () => {
-	logger.verbose(`${client.user.username} Is up and ready to work`);
-	logger.verbose(`Connected as: ${client.user.tag}`);
-	logger.verbose(`Client ID: ${client.user.id}`);
-	logger.verbose(`====================================`);
-	/////await client.user.setGame('</[0-9]\w+/g>', 'https://www.twitch.tv/theonlyartz');
+const winstonClass = new winstonLogger(); 
+client.on('ready', () => {
+    client.user.setActivity('My Delights', {type: 'WATCHING'});
 });
+
 client.commands = new Discord.Collection();
 
 fs.readdir('./commands', (err, files) => {
@@ -56,7 +48,7 @@ client.on('message', async message => {
 	}
 	client.on("message", (message) => {
   if(message.content === "pls kill me") {
-    message.channel.send("hey no, _revives you_!");
+    message.channel.send("_revives you_!");
   }
 });
 
@@ -78,9 +70,12 @@ client.on('message', async message => {
 		}
 	}
 	
+	
+  });
+	
+	
+client.login(process.env.TOKEN);
 
 
-    // .catch(e => {
-    //   logger.error(e)
-    // })
-});
+
+    
