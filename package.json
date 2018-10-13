@@ -4,8 +4,7 @@
   "description": "NO desc?",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "test": "ping"
   },
   "author": "TheOnlyArtz",
   "license": "MIT",
@@ -16,6 +15,6 @@
     "google": "^2.1.0",
     "moment": "^2.18.1",
     "overwatch-stats": "^3.0.2",
-    "winston": "^2.3.1",
+    "winston": "^2.3.1"
   }
 }
